@@ -34,18 +34,18 @@ public class ShopApplication {
 
 		int option = input.nextInt();
 		if (option == 1) {
-			Product monitor = CreateProduct();
+			Product monitor = createProduct();
 		} else if (option == 2) {
-			User first = CreateUser();
+			User first = createUser();
 		} else if (option == 3) {
 			//TODO implementiranje proizvodas
 			// Purchase firstUserPurchasedMonitor = CreatePurchase(first,
 			// monitor);
 		}
-
+		input.close();
 	}
 
-	private static Purchase CreatePurchase(User first, Product monitor) {
+	private static Purchase createPurchase(User first, Product monitor) {
 		/* Nova kupovina: ubaciti u transakciju */
 		Purchase firstUserPurchasedMonitor = new Purchase();
 		firstUserPurchasedMonitor.setUser(first);
@@ -58,7 +58,7 @@ public class ShopApplication {
 		return firstUserPurchasedMonitor;
 	}
 
-	private static Product CreateProduct() {
+	private static Product createProduct() {
 		// kreiranje novog zapisa o proizvodu
 		Product monitor = new Product();
 		monitor.setTitle("Monitor, Dell 28\"");
@@ -69,7 +69,7 @@ public class ShopApplication {
 		return monitor;
 	}
 
-	private static User CreateUser() {
+	private static User createUser() {
 		// kreiranje novog zapisa o korisniku u bazu
 		User first = new User();
 		first.setFullName("Mujo Mujčinović");
